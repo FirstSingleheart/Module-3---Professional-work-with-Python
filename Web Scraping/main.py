@@ -25,8 +25,8 @@ articles = soup.find_all('article')
 
 
 for article in articles:
-    date = article.find_all(class_='tm-article-snippet__datetime-published')
-    time = date.find('title').text
+    date = article.find('span', class_ = 'tm-article-snippet__datetime-published')
+    time = date.time['title']
     hubs = article.find_all('a', class_='tm-article-snippet__hubs-item-link')
     hubs = set(hub.find('span').text for hub in hubs)
     title = article.find('a', class_='tm-article-snippet__title-link')
