@@ -34,5 +34,5 @@ for article in articles:
     url = 'https://habr.com' + href
     title_span = title.find('span').text
     if KEYWORDS & hubs:
-        print(time, title_span, url)
+        print(time,' - ', title_span, url)
         print("*****")

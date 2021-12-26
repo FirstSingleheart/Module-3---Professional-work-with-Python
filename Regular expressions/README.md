@@ -9,7 +9,9 @@
 
 #### Структура данных будет всегда:
 
-```lastname, firstname, surname, organization, position, phone, email```
+```Python
+lastname, firstname, surname, organization, position, phone, email
+```
 
 ####Предполагается, что телефон и e-mail у человека может быть только один.
 ####Необходимо поместить Фамилию, Имя и Отчество человека в поля ```lastname```, ```firstname``` и ```surname``` соответственно.
@@ -19,8 +21,11 @@
 
 ####Объединить все дублирующиеся записи о человеке в одну.
 
-```from pprint import pprint
+```Python
+from pprint import pprint
+
 # читаем адресную книгу в формате CSV в список contacts_list
+
 import csv
 with open("phonebook_raw.csv") as f:
   rows = csv.reader(f, delimiter=",")
@@ -28,11 +33,16 @@ with open("phonebook_raw.csv") as f:
 pprint(contacts_list)
 
 # TODO 1: выполните пункты 1-3 ДЗ
+
 # ваш код
 
 # TODO 2: сохраните получившиеся данные в другой файл
+
 # код для записи файла в формате CSV
+
 with open("phonebook.csv", "w") as f:
   datawriter = csv.writer(f, delimiter=',')
   # Вместо contacts_list подставьте свой список
-  datawriter.writerows(contacts_list)```
+  datawriter.writerows(contacts_list)
+  ```
+**Домашнее задание сдается ссылкой на репозиторий [BitBucket](https://bitbucket.org/) или [GitHub](https://github.com/)**
