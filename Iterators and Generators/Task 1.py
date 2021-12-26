@@ -20,5 +20,8 @@ class ListIterator:
         return self.new_list[self.cursor]
 
 
+flat_list = [item for item in ListIterator(nested_list)]
+print(flat_list)
+
 for item in ListIterator(nested_list):
     print(item)
