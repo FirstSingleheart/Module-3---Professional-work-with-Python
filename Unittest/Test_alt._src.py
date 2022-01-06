@@ -31,8 +31,8 @@ class TestSRC(unittest.TestCase):
     def test_delete_doc_2(self):
         self.assertEqual(delete_doc('10006'), ('10006', True))
 
-    # def test_delete_doc_3(self):
-    #     self.assertEqual(delete_doc('19568'), ('19568', None))
+    def test_delete_doc_3(self):
+        self.assertEqual(delete_doc('19568'), None)
 
     def tearDown(self):
         print('Delete new_user')
