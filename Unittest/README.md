@@ -15,7 +15,6 @@
 
 - ### [_Решение Задачи № 1_](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Unittest/Test_SRC.py)
 - ### [_Альтернативное Решение Задачи № 1_](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Unittest/Test_alt._src.py)
-- ### [_Решение Задачи № 2_](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Unittest/Test_Yandex_service.py)
 
 ### **_Задача №2 Автотест API Яндекса_**
 
@@ -28,6 +27,7 @@
 - _Код ответа соответствует 200._
 - _Результат создания папки - папка появилась в списке файлов._
 
+- ### [_Решение Задачи № 2_](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Unittest/Test_Yandex_service.py)
 
 ### _**Задача №3. Дополнительная (не обязательная)**_
 
