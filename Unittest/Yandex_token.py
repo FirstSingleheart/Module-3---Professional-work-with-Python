@@ -1,1 +1,0 @@
-ya_disk_token = "AQAAAAAF5wpHAADLW49NVCGEuEXOjuckYnhI9Bc"
