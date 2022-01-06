@@ -3,7 +3,7 @@
 ### **_Задача №1 unit-tests_**
 
 Из курса «Python: программирование на каждый день и сверхбыстрое прототипирование» необходимо протестировать программу 
-по работе с бухгалтерией [Лекции 2.1](https://github.com/netology-code/py-homework-basic/tree/master/2.1.functions). 
+по работе с бухгалтерией [Лекции 2.1](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Unittest/src.py). 
 
 - Следует протестировать основные функции по получению информации о документах, добавлении и удалении элементов из словаря.
 
@@ -13,7 +13,7 @@
 2. `input` можно "замокать" с помощью `unittest.mock.patch`, если с этим будут проблемы, то лучше переписать функции так, 
 чтобы данные приходили через параметры.
 
-[Решение Задачи № 1](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Unittest/Test_src.py)
+### [_Решение Задачи № 1_](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Unittest/Test_src.py)
 
 ### **_Задача №2 Автотест API Яндекса_**
 
