@@ -27,6 +27,6 @@
 
 ### _**Задача №3. Дополнительная (не обязательная)**_
 
-Применив `selenium`, напишите `unit-test` для авторизации на Яндексе по url: https://passport.yandex.ru/auth/
+Применив `selenium`, напишите `unit-test` для авторизации на Яндексе по **_url_**: https://passport.yandex.ru/auth/
 
 **Домашнее задание сдается ссылкой на репозиторий [BitBucket](https://bitbucket.org/) или [GitHub](https://github.com/)**
