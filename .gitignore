@@ -1,6 +1,9 @@
 venv/
 sample/
 materials/
+.idea/
+reference materials/
+Unittest/Yandex_token.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -130,5 +133,3 @@ dmypy.json
 
 # MODIFIED SECITON
 #PyCharm project
-.idea/
-reference materials/

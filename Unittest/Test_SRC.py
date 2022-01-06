@@ -15,6 +15,8 @@ test_3_data = ("2207 876234", "11-2", "10006", "19568")
 
 
 class TestSRC(unittest.TestCase):
+    def setUp(self) -> None:
+        print('Create new_user')
 
     @parameterized.expand(test_1_data)
     def test_get_doc_owner_name(self, user_input, answer):
@@ -27,6 +29,9 @@ class TestSRC(unittest.TestCase):
     @parameterized.expand(test_3_data)
     def test_delete_doc(self, number):
         self.assertTrue(delete_doc(number))
+
+    def tearDown(self) -> None:
+        print('Delete new_user')
 
 
 if __name__ == '__main__':
