@@ -14,6 +14,7 @@
 чтобы данные приходили через параметры.
 
 ### [_Решение Задачи № 1_](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Unittest/Test_src.py)
+### [_Решение Задачи № 2_](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Unittest/Test_Yandex_service.py)
 
 ### **_Задача №2 Автотест API Яндекса_**
 
