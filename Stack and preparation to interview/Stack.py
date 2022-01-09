@@ -1,5 +1,4 @@
 from pprint import pprint
-from typing import Any
 
 checking_list = [
     '(((([{}]))))',
@@ -16,9 +15,9 @@ class Stack:
         self.items = []
 
     def is_empty(self):
-        return len(self.items) == 0
+        return self.items == []
 
-    def push(self, item: Any):
+    def push(self, item):
         self.items.append(item)
 
     def pop(self):
@@ -31,21 +30,19 @@ class Stack:
         return len(self.items)
 
 
-def check_dict(list_: list):
-    open_list = ['(', '[', '{']
-    closing_list = [')', ']', '}']
-    open_stack = Stack
-    closing_stack = Stack
+def check_list(list_: list):
+    open_stack = Stack()
+    closing_stack = Stack()
     for string_ in list_:
-        for item in string_:
-            if item in open_list:
-                open_stack.push(item)
-            elif item in closing_list:
-                closing_stack.push(item)
+        for item_ in string_:
+            if item_ in ['([{']:
+                open_stack.push(item_)
+            elif item_ in [')]}']:
+                closing_stack.push(item_)
         if open_stack.is_empty == closing_stack.is_empty:
-            return "Сбалансированно"
-        return "Несбалансированно"
+            print("Сбалансированно")
+        print("Несбалансированно")
 
 
 if __name__ == '__main__':
-    pprint(check_dict(checking_list))
+    pprint(check_list(checking_list))
