@@ -33,18 +33,18 @@ class Stack:
 
 def check_dict(list_: list):
     open_list = ['(', '[', '{']
-    close_list = [')', ']', '}']
+    closing_list = [')', ']', '}']
     open_stack = Stack
     closing_stack = Stack
     for string_ in list_:
         for item in string_:
             if item in open_list:
                 open_stack.push(item)
-            elif item in close_list:
+            elif item in closing_list:
                 closing_stack.push(item)
-            if open_stack.is_empty == closing_stack.is_empty:
-                return "Сбалансированно"
-            return "Несбалансированно"
+        if open_stack.is_empty == closing_stack.is_empty:
+            return "Сбалансированно"
+        return "Несбалансированно"
 
 
 if __name__ == '__main__':
