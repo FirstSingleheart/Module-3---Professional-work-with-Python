@@ -30,18 +30,26 @@ class Stack:
         return len(self.items)
 
 
-def check_list(list_: list):
-    open_stack = Stack()
-    closing_stack = Stack()
-    for string_ in list_:
-        for item_ in string_:
-            if item_ in ['([{']:
-                open_stack.push(item_)
-            elif item_ in [')]}']:
-                closing_stack.push(item_)
-        if open_stack.size == closing_stack.size:
-            print("Сбалансированно")
-        print("Несбалансированно")
+def check_list(my_list: list):
+    for sublist in my_list:
+        open_list = ['(', '[', '{']
+        closing_list = [')', ']', '}']
+        stack = Stack()
+        flag = 0
+        for elem in sublist:
+            if elem in open_list:
+                stack.push(elem)
+            elif elem in closing_list:
+                position = closing_list.index(elem)
+                if stack.size() > 0 and open_list[position] == stack.peek():
+                    stack.pop()
+                else:
+                    flag = 1
+                    break
+        if stack.size() == 0 and flag != 1:
+            print('Cбалансированный')
+        else:
+            print('Несбалансированный')
 
 
 if __name__ == '__main__':
