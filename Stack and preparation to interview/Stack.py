@@ -39,10 +39,10 @@ def check_list(list_: list):
                 open_stack.push(item_)
             elif item_ in [')]}']:
                 closing_stack.push(item_)
-        if open_stack.is_empty == closing_stack.is_empty:
+        if open_stack.size == closing_stack.size:
             print("Сбалансированно")
         print("Несбалансированно")
 
 
 if __name__ == '__main__':
-    pprint(check_list(checking_list))
+    check_list(checking_list)
