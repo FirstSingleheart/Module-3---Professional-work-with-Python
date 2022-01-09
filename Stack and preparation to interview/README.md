@@ -27,6 +27,8 @@ _**2.**_ Используя стек из задания 1 необходимо 
 
 #### [_**Решение**_](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Stack%20and%20preparation%20to%20interview/Stack.py)
 
+#### [**_pep8_**](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Stack%20and%20preparation%20to%20interview/pep8.py)
+
 #### **_*3. [рефакторинг кода (необязательное задание)](https://github.com/netology-code/py-homeworks-advanced/blob/master/7.Interview/PEP8.md)_**
 
 Задачи, которые помогут подговиться к собеседованиям можно найти на следующих ресурсах:
