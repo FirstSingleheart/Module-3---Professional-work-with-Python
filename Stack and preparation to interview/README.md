@@ -25,6 +25,8 @@ _**2.**_ Используя стек из задания 1 необходимо 
 
 Программа ожидает на вход строку со скобками. На выход сообщение: "Сбалансированно", если строка корректная, и "Несбалансированно", если строка составлена неверно.
 
+#### [_**Решение**_](https://github.com/FirstSingleheart/Module-3---Professional-work-with-Python/blob/master/Stack%20and%20preparation%20to%20interview/Stack.py)
+
 #### **_*3. [рефакторинг кода (необязательное задание)](https://github.com/netology-code/py-homeworks-advanced/blob/master/7.Interview/PEP8.md)_**
 
 Задачи, которые помогут подговиться к собеседованиям можно найти на следующих ресурсах:
