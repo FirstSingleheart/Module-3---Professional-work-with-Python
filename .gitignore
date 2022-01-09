@@ -4,6 +4,7 @@ materials/
 .idea/
 reference materials/
 Unittest/Yandex_token.py
+Unittest/Ya_Auth.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
