@@ -1,6 +1,5 @@
-from random import randrange
-
 import vk_api
+from random import randrange
 from vk_api.longpoll import VkLongPoll, VkEventType
 
 token = input('Token: ')
