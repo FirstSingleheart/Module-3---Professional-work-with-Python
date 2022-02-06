@@ -20,47 +20,39 @@ connection = engine.connect()
 
 
 # Ищет людей по критериям
-def search_users(sex, age_at, age_to, city):
-    all_persons = []
+def search_users(gender, age_min, age_max, city):
+    all_humans = []
     link_profile = 'https://vk.com/id'
-    vk_ = vk_api.VkApi(token=user_token)
-    response = vk_.method('users.search',
-                          {'sort': 1,
-                           'sex': sex,
-                           'status': 1,
-                           'age_from': age_at,
-                           'age_to': age_to,
-                           'has_photo': 1,
-                           'count': 25,
-                           'online': 1,
-                           'hometown': city
-                           })
+    vk_search = vk_api.VkApi(token=user_token)
+    response = vk_search.method('users.search',
+                                {'sort': 1,
+                                 'gender': gender,
+                                 'status': 1,
+                                 'age_from': age_min,
+                                 'age_to': age_max,
+                                 'has_photo': 1,
+                                 'count': 25,
+                                 'online': 1,
+                                 'hometown': city})
     for element in response['items']:
-        person = [
-            element['first_name'],
-            element['last_name'],
-            link_profile + str(element['id']),
-            element['id']
-        ]
-        all_persons.append(person)
-    return all_persons
-    # return True
+        person = [element['first_name'], element['last_name'], link_profile + str(element['id']), element['id']]
+        all_humans.append(person)
+        return all_humans
+        # return True
 
 
 # Находит фото людей
 def get_photo(user_owner_id):
-    vk_ = vk_api.VkApi(token=user_token)
+    vk_photo = vk_api.VkApi(token=user_token)
     try:
-        response = vk_.method('photos.get',
-                              {
-                                  'access_token': user_token,
-                                  'v': V,
-                                  'owner_id': user_owner_id,
-                                  'album_id': 'profile',
-                                  'count': 10,
-                                  'extended': 1,
-                                  'photo_sizes': 1,
-                              })
+        response = vk_photo.method('photos.get',
+                                   {'access_token': user_token,
+                                    'v': V,
+                                    'owner_id': user_owner_id,
+                                    'album_id': 'profile',
+                                    'count': 10,
+                                    'extended': 1,
+                                    'photo_sizes': 1})
     except ApiError:
         return 'нет доступа к фото'
     users_photos = []
@@ -70,7 +62,7 @@ def get_photo(user_owner_id):
                 [response['items'][i]['likes']['count'],
                  'photo' + str(response['items'][i]['owner_id']) + '_' + str(response['items'][i]['id'])])
         except IndexError:
-            users_photos.append(['нет фото.'])
+            users_photos.append(['нет фото'])
     return users_photos
     # return True
 
@@ -82,14 +74,14 @@ def get_photo(user_owner_id):
 
 # Сортируем фото по лайкам, удаляем лишние элементы
 def sort_likes(photos):
-    result = []
+    sort_list = []
     for element in photos:
-        if element != ['нет фото.'] and photos != 'нет доступа к фото':
-            result.append(element)
-    return sorted(result)
+        if element != ['нет фото'] and photos != 'нет доступа к фото':
+            sort_list.append(element)
+    return sorted(sort_list)
 
 
-# JSON file create with result of programm
+# JSON file create with result of program
 def json_create(lst):
     today = datetime.date.today()
     today_str = f'{today.day}.{today.month}.{today.year}'
@@ -105,5 +97,4 @@ def json_create(lst):
 
     with open("result.json", "a", encoding='UTF-8') as write_file:
         json.dump(res_list, write_file, ensure_ascii=False)
-
-    print(f'Информация о загруженных файлах успешно записана в json файл.')
+    print(f'Информация о загруженных файлах успешно записана в json файл')
